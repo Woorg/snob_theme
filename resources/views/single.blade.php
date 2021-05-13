@@ -20,7 +20,7 @@
         <article class="projects__project">
           <a class="projects__link" href="{{ wp_get_attachment_image_url( $image, 'full' ) }}">
             <div class="projects__image">
-              {!! wp_get_attachment_image( $image, 'project_thumb' ) !!}
+              {!! wp_get_attachment_image( $image, 'full' ) !!}
             </div>
           </a>
         </article>
