@@ -1,0 +1,63 @@
+.feedback
+    background: url(../images/general/feedback-bg.jpg) 50% 0 no-repeat
+    background-size: cover
+    &__container
+        padding-top: (80px / 2)
+        padding-bottom: (80px / 2)
+        display: flex
+        flex-wrap: wrap
+        +mq($small)
+            padding-top: 80px
+            padding-bottom: 80px
+            flex-wrap: nowrap
+    &__content
+        padding-bottom: (65px / 2)
+        color: #ffffff
+        font-weight: 400
+        +font-size(18px)
+        line-height: 1.3
+        +mq($small)
+            margin-right: 20px
+            padding-bottom: 65px
+            max-width: 290px
+
+    &__title
+        margin-bottom: 18px
+        +font-size(36px)
+        font-weight: 600
+
+    &__text
+        +mq($small)
+            padding-right: 60px
+
+    &__name
+        margin-top: 78px
+        margin-bottom: 18px
+
+    // &__position
+    //     margin-bottom: 18px
+    //     font-style: italic
+
+    &__phone,
+    &__email
+        color: inherit
+        font-weight: 600
+        text-decoration: none
+        +tr(.3s ease)
+
+        &:hover
+            color: darken(#FFF, 10)
+            +tr(.3s ease)
+
+    &__form
+        margin-left: auto
+        max-width: 730px
+        width: 100%
+        display: flex
+        .wpcf7
+            flex-grow: 1
+
+
+    &__form-submit
+        margin-left: auto
+

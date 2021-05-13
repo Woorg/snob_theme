@@ -1,0 +1,30 @@
+.header
+  z-index: 2
+  position: relative
+  background-color: #000000
+  +tr(.3s linear)
+
+  &__container
+    padding-top: 15px
+    padding-bottom: 15px
+    min-height: 56px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    // flex-wrap: wrap
+    // +mq($large)
+
+  &__logo
+    margin-left: 0
+    margin-right: 0
+    max-width: 132px
+    // +mq($large)
+
+  &__nav
+    margin-left: auto
+
+    +mq($large)
+      max-width: 100%
+
+
+

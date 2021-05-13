@@ -1,0 +1,77 @@
+.slider
+
+    &__image
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: 50% 0
+        +mq($medium)
+            width: auto
+            height: auto
+
+    &__pagination-w
+        z-index: 1
+        position: absolute
+        bottom: 16px
+        left: 50%
+        width: 235px
+        height: 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        background-color: rgba(0, 0, 0, 0.23)
+        transform: translateX(-50%)
+        +mq($large)
+            width: 185px
+
+
+    &__pagination
+        left: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        transform: translateX(-50%)
+
+    &__button
+        position: absolute
+        top: 50%
+        width: 30px
+        height: 30px
+        color: #FFF
+
+        cursor: pointer
+        transform: translateY(-50%)
+        +tr(.3s ease)
+        &:hover
+            color: darken(#FFF, 10)
+            +tr(.3s ease)
+
+    &__button_prev
+        left: 10px
+        transform: translateY(-50%) rotate(180deg)
+
+
+    &__button_next
+        right: 10px
+        transform: translateY(-50%)
+
+
+    .swiper-pagination-bullet
+        margin-right: 11px
+        width: 7px
+        height: 7px
+        background-color: rgba(255, 255, 255, 0.54)
+        +tr(.3s ease)
+
+        &:last-child
+            margin-right: 0
+
+        &:hover
+            background-color: #ffffff
+            +tr(.3s ease)
+
+    .swiper-pagination-bullet-active
+        background-color: #ffffff
+            +tr(.3s ease)

@@ -1,0 +1,41 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "fast-average-color": "^6.3.0",
+    "jquery": "^3.5.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "magnific-popup": "^1.1.0",
+    "rfs": "^9.0.3",
+    "scroll-tabs": "^1.0.1",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^6.4.5",
+    "tabbyjs": "^12.0.3",
+    "tiny-slider": "^2.9.3"
+  },
+  "devDependencies": {
+    "@swup/body-class-plugin": "^1.0.2",
+    "@swup/fade-theme": "^1.0.5",
+    "@swup/preload-plugin": "^1.0.3",
+    "@swup/scripts-plugin": "^1.1.0",
+    "@swup/scroll-plugin": "^1.1.0",
+    "@swup/slide-theme": "^1.0.5",
+    "aos": "^2.3.4",
+    "gulp": "4.0.2",
+    "postcss": "^8.2.13",
+    "postcss-import": "^14.0.1",
+    "postcss-loader": "^5.2.0",
+    "postcss-pxtorem": "^5.1.1",
+    "swup": "^2.0.14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,24 @@
+doctype html
+html(class="no-js" lang="ru")
+
+    include ../blocks/head/head.pug
+    include ../blocks/header/header.pug
+    include ../blocks/hero/hero.pug
+
+    include ../blocks/footer/footer.pug
+
+    head
+        +head(head.defaults)
+    body.page
+        .page__inner
+            |%=symbols=%
+            +header()
+            main.page__main
+                +hero()
+
+        .page__bottom
+            +footer()
+
+        script(src='%=static=%js/separate-js/jquery.min.js')
+        //- script(src='%=static=%js/separate-js/swiper-bundle.min.js')
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,65 @@
+{
+  "active": true,
+  "type": "cpt",
+  "name": "project",
+  "supports": [
+    "title",
+    "revisions",
+    "page-attributes",
+    "thumbnail"
+  ],
+  "labels": {
+    "has_one": "Project",
+    "has_many": "Project",
+    "text_domain": "sage",
+    "overrides": {
+      "name": "Проекты",
+      "singular_name": "Project",
+      "menu_name": "Проекты",
+      "name_admin_bar": "Проекты",
+      "add_new": "Add New Проект",
+      "add_new_item": "Add New Проект",
+      "edit_item": "Edit Проекты",
+      "new_item": "New Проект",
+      "view_item": "View Проект",
+      "view_items": "View Проекты",
+      "search_items": "Search Проект",
+      "not_found": "No Проекты found.",
+      "not_found_in_trash": "No Проекты found in Trash.",
+      "parent_item-colon": "Parent Проекты:",
+      "all_items": "All Проекты",
+      "archives": "Проекты",
+      "attributes": "Проекты Attributes",
+      "insert_into_item": "Insert into Проект",
+      "uploaded_to_this_item": "Uploaded to this Проект",
+      "featured_image": "Featured Image",
+      "set_featured_image": "Set featured image",
+      "remove_featured_image": "Remove featured image",
+      "use_featured_image": "Use featured image",
+      "filter_items_list": "Filter Проект list",
+      "items_list_navigation": "Проект list navigation",
+      "items_list": "Проекты list"
+    }
+  },
+  "config": {
+    "public": true,
+    "publicly_queryable": true,
+    "show_ui": true,
+    "show_in_menu": true,
+    "query_var": true,
+    "has_archive": true,
+    "hierarchical": false,
+    "menu_position": null,
+    "menu_icon": "dashicons-book",
+    "can_export": true,
+    "capability_type": "post",
+    "taxonomies": [
+    ],
+    "rewrite": {
+      "slug": "projects",
+      "with_front": true,
+      "feeds": true,
+      "pages": true
+    }
+  }
+}
