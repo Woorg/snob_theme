@@ -8,7 +8,8 @@ import svg4everybody from 'svg4everybody';
 // import SwupScriptsPlugin from '@swup/scripts-plugin';
 
 import Nav from '../../blocks/nav/nav';
-import Map from '../../blocks/map/map';
+// import Map from '../../blocks/map/map';
+import Parallax from '../../blocks/hero/hero';
 
 
 (function ($) {
@@ -65,17 +66,70 @@ import Map from '../../blocks/map/map';
 
     const nav = new Nav()
 
+    /**
+     * Parallax
+     */
+
+    const $heroContainer = document.querySelector('.hero')
+
+    if ($heroContainer) {
+      const parallax = Parallax()
+
+    }
+
 
     /**
      Map
     */
 
-    const $mapContainer = document.querySelector('.map')
+    // const $mapContainer = document.querySelector('.map')
 
-    if ( $mapContainer ) {
-      const map = Map()
+    // if ( $mapContainer ) {
+    //   const map = Map()
 
+    // }
+
+
+    /**
+     * Popup
+     *
+    */
+
+    const $feedbackButton = $('.feedback__сta');
+
+    $feedbackButton.magnificPopup({
+      type: 'inline',
+      // delegate: 'a',
+      // removalDelay: 300, //delay removal by X to allow out-animation
+      callbacks: {
+        beforeOpen: function() {
+           this.st.mainClass = this.st.el.attr('data-effect');
+        }
+      },
+      midClick: true,
+      closeBtnInside: false
+    });
+
+
+
+    // Grow textarea
+    function growTextarea (i,elem) {
+      var elem = $(elem);
+      var resizeTextarea = function( elem ) {
+          var scrollLeft = window.pageXOffset || (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+          var scrollTop  = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+          elem.css('height', 'auto').css('height', elem.prop('scrollHeight') );
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+        elem.on('input', function() {
+          resizeTextarea( $(this) );
+        });
+        resizeTextarea( $(elem) );
     }
+
+    $('.form__textarea').each(growTextarea);
+
+
 
 
 })(jQuery);

@@ -17,13 +17,13 @@ add_action('wp_enqueue_scripts', function () {
     // wp_enqueue_style('aos', get_template_directory_uri() . '/front/static/prod/assets/css/separate-css/aos.css', null);
 
     // magnific css
-    // wp_enqueue_style('magnific', get_template_directory_uri() . '/front/static/dev/assets/css/separate-css/magnific-popup.css', null);
+    wp_enqueue_style('magnific', get_template_directory_uri() . '/front/static/dev/assets/css/separate-css/magnific-popup.css', null);
 
 
-    // main css dev
+    // MAIN CSS DEV
     wp_enqueue_style('main', get_template_directory_uri() . '/front/static/dev/assets/css/main.css', null, random());
 
-    // main css prod
+    // MAIN CSS PROD
     // wp_enqueue_style('main', get_template_directory_uri() . '/front/static/prod/assets/css/main.min.css', null);
 
     wp_enqueue_script('jquery');
@@ -40,7 +40,7 @@ add_action('wp_enqueue_scripts', function () {
     // wp_script_add_data('aos', 'defer', true);
 
     // magnific js
-    // wp_enqueue_script('magnific', get_template_directory_uri() . '/front/static/dev/assets/js/separate-js/jquery.magnific-popup.min.js', null, '1.0', true);
+    wp_enqueue_script('magnific', get_template_directory_uri() . '/front/static/dev/assets/js/separate-js/jquery.magnific-popup.min.js', null, '1.0', true);
 
     // wp_script_add_data('magnific', 'defer', true);
 
@@ -48,23 +48,23 @@ add_action('wp_enqueue_scripts', function () {
     wp_script_add_data('contact-form-7', 'defer', true);
 
 
-    if ( is_home() || is_front_page()) {
+    // if (is_home() || is_front_page()) {
 
-        // Yandex maps
-        wp_enqueue_script('ya-maps', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=aba0a418-e4f2-4ee8-91f5-cba95332689d', null, '1.0', true);
+    //     // Yandex maps
+    //     wp_enqueue_script('ya-maps', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=aba0a418-e4f2-4ee8-91f5-cba95332689d', null, '1.0', true);
 
-        wp_script_add_data('ya-maps', 'defer', true);
+    //     wp_script_add_data('ya-maps', 'defer', true);
 
-        wp_localize_script('ya-maps', 'map', [
-            'coords' => carbon_get_theme_option('yandex_map_coords')
-        ]);
-    }
+    //     wp_localize_script('ya-maps', 'map', [
+    //         'coords' => carbon_get_theme_option('yandex_map_coords')
+    //     ]);
+    // }
 
 
-    // main js dev
+    // MAIN JS DEV
     wp_enqueue_script('main', get_template_directory_uri() . '/front/static/dev/assets/js/main.js', null, '1.0', true);
 
-    // main js prod
+    // MAIN JS PROD
     // wp_enqueue_script('main', get_template_directory_uri() . '/front/static/prod/assets/js/main.min.js', null, '1.0', true);
 
     wp_script_add_data('main', 'defer', true);
@@ -222,4 +222,6 @@ add_action('after_setup_theme', function () {
         ->map(function ($field) {
             return require_once($field);
         });
+
+
 });

@@ -14,7 +14,7 @@
             ->set_inner_blocks_position( 'below' )
 
             ->set_render_callback( function ( $arg ) {
-                 return get_block_template('scenarios', $arg);
+                 return snob_get_block_template('scenarios', $arg);
             });
 
     });

@@ -3,28 +3,16 @@
     <div class="feedback__content">
       <h2 class="feedback__title">{{ $title }}</h2>
       <div class="feedback__text">{!! $text !!}</div>
-
-      <div class="feedback__name">{!! $name !!}</div>
-      {{-- <div class="feedback__position">{!! $position !!}</div> --}}
-
-
-      <a class="feedback__phone" href='{{ 'tel:' . str_replace( array(
-                    ")",
-                    "(",
-                    " ",
-                    "-",
-                  ), "", $phone ) }}'>{!! $phone !!}</a>
-      <a class="feedback__email" href='mailto:{{ $email }}'>{!! $email !!}</a>
-
+      <a class="feedback__сta button button_third open-popup" data-effect="mfp-zoom-in" href="#feedback-form">{{ $button_text }}</a>
     </div>
 
-
-    <div class="feedback__form form">
+    <div id="feedback-form" class="feedback__form form mfp-hide">
+      <h3 class="feedback__form-title">{{ $form_title }}</h3>
       {!! do_shortcode($form_shortcode) !!}
     </div>
 
   </div>
-</section>
 
+</section>
 
 

@@ -1,0 +1,150 @@
+.contacts
+    position: relative
+    background-color: #1A1A1A
+    background-image: linear-gradient(rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 1) 69%)
+
+    &:after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 830px
+        background-image: linear-gradient(rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 1) 69%)
+        // +mq($large)
+
+    &__container
+        position: relative
+        padding-top: 70px
+        padding-bottom: 70px
+
+
+    &__list
+        z-index: 1
+        position: absolute
+        left: 20px
+        right: 20px
+        +mq($large)
+            top: 160px
+            left: 0
+            right: 0
+
+    &__item
+        margin-bottom: 20px
+        padding-top: 18px
+        padding-right: 12px
+        padding-left: 18px
+        padding-bottom: 10px
+        border: 1px solid rgba(255, 255, 255, 1)
+        color: rgba(255, 255, 255, 1)
+        +mq($large)
+            position: absolute
+            top: 0
+            left: 0
+            max-width: 220px
+            margin-bottom: 0
+
+        &:after,
+        &:before
+            +mq($large)
+                position: absolute
+                content: ""
+                top: 0
+                left: 0
+                border-radius: 50%
+
+        &:before
+             +mq($large)
+                top: -9px
+                left: -9px
+                height: 18px
+                width: 18px
+                background-color: rgba(40, 40, 40, 1)
+                border: 1px solid rgba(255, 255, 255, 1)
+
+        &:after
+             +mq($large)
+                top: -3px
+                left: -3px
+                height: 6px
+                width: 6px
+                background-color: rgba(255, 255, 255, 1)
+                border: 1px solid rgba(255, 255, 255, 1)
+
+
+
+    &__item_1
+        top: 150px
+        right: 226px
+        left: auto
+
+    &__item_2
+        top: 0
+        right: 492px
+        left: auto
+        &:before
+            top: auto
+            bottom: -9px
+            left: auto
+            right: -9px
+
+        &:after
+            top: auto
+            bottom: -3px
+            left: auto
+            right: -3px
+
+    &__item_3
+        top: 258px
+        left: 425px
+
+        &:before
+            top: -9px
+            right: -9px
+            left: auto
+
+        &:after
+            top: -3px
+            right: -3px
+            left: auto
+
+    &__item_4
+        top: 258px
+        left: 15px
+
+        &:before
+            top: -9px
+            right: -9px
+            left: auto
+
+        &:after
+            top: -3px
+            right: -3px
+            left: auto
+
+    &__city
+        font-size: 18px
+        font-weight: bold
+
+    &__phone
+        font-size: 14px
+        font-weight: 600
+        color: rgba(255, 255, 255, 1)
+        text-decoration: none
+
+    &__text,
+    &__country
+        font-size: 12px
+
+    &__text
+        padding-right: 30px
+
+    &__map
+        margin-top: -22px
+        margin-left: -120px
+        max-width: 1440px
+        // display: none
+        // +mq($large)
+        //     display: block
+
+

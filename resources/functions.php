@@ -7,6 +7,7 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+
 /**
  * Helper function for prettying up errors
  * @param string $message
@@ -47,6 +48,7 @@ if (!class_exists('Roots\\Sage\\Container')) {
     require_once $composer;
 }
 
+
 /**
  * Sage required files
  *
@@ -77,6 +79,8 @@ array_map(function ($file) use ($sage_error) {
  * ├── STYLESHEETPATH         -> /srv/www/example.com/current/web/app/themes/sage/resources/views
  * └── TEMPLATEPATH           -> /srv/www/example.com/current/web/app/themes/sage/resources
  */
+
+
 array_map(
     'add_filter',
     ['theme_file_path', 'theme_file_uri', 'parent_theme_file_path', 'parent_theme_file_uri'],
@@ -94,23 +98,20 @@ Container::getInstance()
 
 // Templates for gutenberg blocks
 
+function snob_get_block_template( $template, $args ){
+  $template = App\locate_template([$template.".blade.php", 'resources/views/blocks/'.$template.'.blade.php']);
 
-function get_block_template($template, $args)
-{
-    $template = App\locate_template([$template . ".blade.php", 'resources/views/blocks/' . $template . '.blade.php']);
+  $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
+    return apply_filters("sage/template/{$class}/data", $data, $template);
+  });
 
-    $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
-        return apply_filters("sage/template/{$class}/data", $data, $template);
-    }, []);
+  $data = array_merge($data, $args);
 
-    $data = array_merge($data, $args);
-
-    if ($template)
-        echo App\template($template, $data);
-    else
-        echo sprintf(__("Template for block %s not found", 'my-theme'), $template);
+  if( $template )
+    echo App\template($template, $data);
+  else
+    echo sprintf(__("Template for block %s not found", 'my-theme'), $template);
 }
-
 
 
 /**
@@ -331,3 +332,4 @@ function load_reviews_by_ajax_callback()
 
     wp_die();
 }
+

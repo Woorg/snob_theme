@@ -1,63 +1,89 @@
 .feedback
-    background: url(../images/general/feedback-bg.jpg) 50% 0 no-repeat
+    background-color: rgba(26, 26, 26, 1)
     background-size: cover
     &__container
-        padding-top: (80px / 2)
-        padding-bottom: (80px / 2)
+        padding-top: (50px / 2)
+        padding-bottom: (50px / 2)
         display: flex
         flex-wrap: wrap
         +mq($small)
-            padding-top: 80px
-            padding-bottom: 80px
+            padding-top: 50px
+            padding-bottom: 130px
             flex-wrap: nowrap
+
     &__content
-        padding-bottom: (65px / 2)
+        // padding-bottom: (65px / 2)
         color: #ffffff
         font-weight: 400
         +font-size(18px)
         line-height: 1.3
         +mq($small)
-            margin-right: 20px
-            padding-bottom: 65px
-            max-width: 290px
+            // margin-right: 20px
+            // padding-bottom: 65px
+            max-width: 50%
 
     &__title
         margin-bottom: 18px
-        +font-size(36px)
+        +font-size(32px)
         font-weight: 600
+        line-height: 1.6
 
     &__text
+        line-height: 1.6
         +mq($small)
-            padding-right: 60px
+            padding-right: 50px
 
-    &__name
-        margin-top: 78px
-        margin-bottom: 18px
+    &__сta
+        margin-top: 30px
 
-    // &__position
+    // &__name
+    //     margin-top: 78px
     //     margin-bottom: 18px
-    //     font-style: italic
 
-    &__phone,
-    &__email
-        color: inherit
-        font-weight: 600
-        text-decoration: none
-        +tr(.3s ease)
 
-        &:hover
-            color: darken(#FFF, 10)
-            +tr(.3s ease)
+    // &__phone,
+    // &__email
+    //     color: inherit
+    //     font-weight: 600
+    //     text-decoration: none
+    //     +tr(.3s ease)
+
+    //     &:hover
+    //         color: darken(#FFF, 10)
+    //         +tr(.3s ease)
 
     &__form
+        margin-right: auto
         margin-left: auto
-        max-width: 730px
+        max-width: 850px
         width: 100%
         display: flex
         .wpcf7
             flex-grow: 1
 
 
-    &__form-submit
-        margin-left: auto
+    &__form-title
+        margin-bottom: 50px
+        max-width: 400px
+        color: #FFF
+        +font-size(32px)
+        font-weight: 600
+        line-height: 1.6
 
+
+    &__form-submit
+        // mt
+        padding-right: 50px
+        padding-left: 50px
+        +mq($small)
+            margin-top: 50px
+            margin-right: auto
+
+
+
+.feedback_contacts
+    position: relative
+    z-index: 1
+    margin-top: -350px
+    +mq($large)
+        margin-top: -240px

@@ -14,20 +14,13 @@ add_action('carbon_fields_register_fields', function () {
             Field::make( 'text', 'instagram_url', __( 'Instagram URL' ) ),
             Field::make( 'image', 'telegram_icon', __( 'Telegram icon' ) ),
             Field::make( 'text', 'telegram_url', __( 'Telegram URL' ) ),
+            Field::make( 'image', 'behance_icon', __( 'Behance icon' ) ),
+            Field::make( 'text', 'behance_url', __( 'Behance URL' ) ),
             Field::make( 'text', 'copyright'),
-            Field::make( 'text', 'yandex_map_coords', __( 'Yandex map coords' )),
-            // Field::make( 'text', 'email', __( 'Email' ))
-
-
+            Field::make( 'text', 'yandex_map_coords', __( 'Yandex map coords' ))
         ));
 
 
-    // Container::make('theme_options', __('Books archive options', 'sage'))
-    //     ->set_page_parent('edit.php?post_type=book')
-
-    //     ->add_fields([
-    //         Field::make('rich_text', 'books_archive_desc', __('Books archive description', 'sage'))
-    //     ]);
 });
 
 

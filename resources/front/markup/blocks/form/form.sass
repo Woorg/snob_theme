@@ -4,17 +4,57 @@
     flex-direction: column
         // align-items: flex-end
 
+    &__row
+        display: flex
+        flex-wrap: wrap
+        +mq($small)
+            flex-wrap: nowrap
+
+
+    &__col
+        width: 100%
+        +mq($small)
+            max-width: 50%
+        &:first-child
+            +mq($small)
+                padding-right: 50px
+
     &__field
-        margin-bottom: 23px
+        margin-bottom: 50px
         display: flex
         flex-grow: 1
+        +mq($small)
+            margin-bottom: 23px
+
         .wpcf7-form-control-wrap
             flex-grow: 1
 
+    &__field_textarea
+        .form__label-text
+            align-self: center
+
+    &__label
+        display: flex
+        align-items: center
+        flex-grow: 1
+        flex-wrap: wrap
+        +mq($small)
+            flex-wrap: nowrap
+
+    &__label-text
+        margin-top: 12px
+        padding-right: 10px
+        min-width: 165px
+        color: #828282
+        font-size: 16px
+        line-height: 1.2
+        align-self: flex-start
+
     &__input,
-    &__textarea
+    &__textarea,
+    &__select
         +resetbutton()
-        border: 1px solid #fff
+        border-bottom: 1px solid #828282
         padding-right: 20px
         padding-left: 20px
         background-color: transparent
@@ -37,11 +77,19 @@
             border: 1px solid green
 
 
+    // .wpcf7-form-control-wrap
+
+    &__select
+        option
+            background-color: rgba(26, 26, 26, 1)
 
     &__textarea
-        padding-top: 13px
-        padding-bottom: 13px
-        min-height: 190px
+        padding-top: 20px
+        padding-bottom: 20px
+        resize: none
+        overflow: hidden
+        // height: 49px
+        line-height: 1.5
 
     // &__submit
 

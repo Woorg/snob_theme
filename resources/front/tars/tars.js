@@ -162,9 +162,7 @@ tars.options = {
     notify: true,
     build: {
         hash: tars.flags.release
-            ? Math.random()
-                  .toString(36)
-                  .substring(7)
+            ? ''
             : '',
         path: useBuildVersioning ? `${tars.config.buildPath}build${buildVersion}/` : tars.config.buildPath,
         version: useBuildVersioning ? buildVersion : '',

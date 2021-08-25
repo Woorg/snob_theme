@@ -40,6 +40,17 @@
   padding-left: 38px
   background-color: #ffffff
 
+.button_third
+  border: 1px solid rgba(255, 255, 255, 1)
+  padding-right: 20px
+  padding-left: 20px
+  height: 45px
+  background-color: transparent
+  color: rgba(255, 255, 255, 1)
+  &:hover
+    background-color: #ffffff
+    color: #000
+
 
 
 .text
@@ -67,3 +78,49 @@
 
   em
     font-style: italic
+
+
+
+
+
+
+
+.mfp-zoom-in
+
+  .mfp-with-anim
+    opacity: 0
+    transition: 0.2s ease-in-out
+    transform: scale(0.8)
+
+
+  &.mfp-bg
+    opacity: 0
+    transition: 0.3s ease-out
+
+
+  &.mfp-ready
+    .mfp-with-anim
+      opacity: 1
+      transform: scale(1)
+      transition: 0.2s ease-in-out
+
+    &.mfp-bg
+      opacity: 1
+      transition: 0.2s ease-in-out
+
+
+
+  &.mfp-removing
+
+    .mfp-with-anim
+      transform: scale(0.8)
+      opacity: 0
+      transition: 0.2s ease-in-out
+
+    &.mfp-bg
+      opacity: 0
+      transition: 0.2s ease-in-out
+
+
+
+

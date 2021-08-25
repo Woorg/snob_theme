@@ -13,7 +13,7 @@
             ->set_inner_blocks( true )
             ->set_inner_blocks_position( 'below' )
             ->set_render_callback( function ( $arg ) {
-                 echo get_block_template('test', $arg);
+                 echo snob_get_block_template('test', $arg);
             });
 
     });

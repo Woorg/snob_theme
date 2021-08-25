@@ -15,7 +15,7 @@
             ->set_inner_blocks_position( 'below' )
 
             ->set_render_callback( function ( $arg ) {
-                 return get_block_template('my-books', $arg);
+                 return snob_get_block_template('my-books', $arg);
             });
 
     });

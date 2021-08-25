@@ -9,11 +9,8 @@
                 Field::make( 'textarea', 'text', 'Text' )
                     ->set_rows( 2 ),
 
-                Field::make( 'text', 'name', 'Name' ),
-                Field::make( 'text', 'position', 'Position' ),
-                Field::make( 'text', 'phone', 'Phone' ),
-                Field::make( 'text', 'email', 'Email' ),
-
+                Field::make( 'text', 'button_text', __( 'Button text') ),
+                Field::make( 'text', 'form_title', __( 'Form title') ),
                 Field::make( 'text', 'form_shortcode', 'Form shortcode' )
             ))
 
@@ -23,7 +20,7 @@
             ->set_inner_blocks_position( 'below' )
 
             ->set_render_callback( function ( $arg ) {
-                 return get_block_template('feedback', $arg);
+                 return snob_get_block_template('feedback', $arg);
             });
 
     });

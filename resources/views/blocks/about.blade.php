@@ -8,11 +8,8 @@
       <div class="about__text text">
         {!! $about_text !!}
       </div>
-      <a href="mailto:{{ $about_button_link }}" class="about__button button button_secondary">{{ $about_button_text }}</a>
+      {{-- <a href="mailto:{{ $about_button_link }}" class="about__button button button_secondary">{{ $about_button_text }}</a> --}}
     </div>
 
   </div>
 </section>
-
-
-

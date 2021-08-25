@@ -1,65 +1,31 @@
-import Swiper, {Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay} from 'swiper';
-Swiper.use([Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay]);
+function Parallax () {
 
+  // let background = document.querySelector(".hero__image");
+  // let person = document.querySelector(".person");
+  // let mountain = document.querySelector(".hero__bg");
+  // let smoke1 = document.querySelector(".smoke1");
+  // let smoke2 = document.querySelector(".smoke2");
+  let text = document.querySelector(".hero__image");
+  // let cover = document.querySelector(".cover");
+  // let header = document.querySelector("header");
 
-const heroSlider = () => {
+  const scrollHandle = (e) => {
+    let scroll = window.scrollY;
 
-    const $heroThumbs = $('.js-hero-thumbs');
+    text.style.transform = `translate(-50%, -50%) translate3d(0, ${
+      scroll * 0.55
+    }px, 0)`;
+    // background.style.transform = `translate3d(0, ${scroll * 0.9}px, 0)`;
+    // mountain.style.transform = `translate3d(0, ${scroll * 0.35}px, 0)`;
+    // smoke1.style.transform = `translate3d(0, ${scroll * 0.7}px, 0)`;
+    // smoke2.style.transform = `translate3d(0, ${scroll * 0.3}px, 0)`;
+    // person.style.transform = `translate3d(0, ${scroll * 0.25}px, 0)`;
+  };
 
-    const $heroSwiper = new Swiper('.js-hero-slider', {
-        direction: 'horizontal',
-        preloadImages: false,
-        lazy: true,
-        loop: false,
-        loopedSlides: 1,
-
-        navigation: {
-            nextEl: '.slider__button_next',
-            prevEl: '.slider__button_prev',
-        },
-
-        pagination: {
-            el: '.slider__pagination',
-            type: 'bullets',
-        },
-
-    });
-
-
-    if ($heroThumbs.length > 0) {
-
-      const $heroSwiperThumbs = new Swiper('.js-hero-thumbs', {
-        initialSlide: 0,
-        slideToClickedSlide: true,
-        updateOnWindowResize: true,
-        roundLengths: true,
-        lazy: true,
-        lazy: {
-          loadPrevNext: true,
-          loadPrevNextAmount: 4,
-        },
-        centeredSlides: true,
-        touchRatio: 0.2,
-        allowTouchMove: false,
-        loop: false,
-        touchRatio: 0.2,
-
-        breakpoints: {
-          0: {
-          },
-          1100: {
-          }
-        }
-
-      });
-
-      $heroSwiper.controller.control = $heroSwiperThumbs;
-      $heroSwiperThumbs.controller.control = $heroSwiper;
-
-    }
-
+  window.addEventListener("scroll", scrollHandle);
 
 }
 
+// 0.85
 
-export default heroSlider;
+export default Parallax
